@@ -1,16 +1,20 @@
-document.getElementById('addMoney').addEventListener('click', function (event) {
-    event.preventDefault();
+document.getElementById('add-Money').addEventListener('click', function (event) {
+    event.preventDefault()
+    const currentAmount = document.getElementById('amount').value;
+    const currentPinPass = document.getElementById('pin-pass').value;
+    const currentValues = document.getElementById('currentValue').innerText;
 
-    const inputAmount = document.getElementById('amount').value;
-    console.log(inputAmount);
-    
-    const inputField = document.getElementById('pin-pass').value;
-    console.log(inputField);
+    //String to number
+    const currentTotalAmount = parseFloat(currentAmount);
+    const currentTotalNumber = parseFloat(currentValues)
 
-    // const currentValue = document.getElementById('currentValue').innerText;
-    // console.log(currentValue);
+    if (currentPinPass === '1234') {
 
-    // const total = inputAmount + currentValue;
-    // const number = parseFloat(total);
-    // console.log(number);
+        const totalValue = document.getElementById('currentValue');
+        const totalNumber = currentTotalNumber + currentTotalAmount;
+        totalValue.innerText = totalNumber;
+    }
+    else {
+        alert('Please try again')
+    }
 })
