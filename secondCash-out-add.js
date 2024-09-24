@@ -4,7 +4,6 @@ function getElementField(id) {
     return stringToNumber;
 
 }
-
 function currentValue(id) {
     const currentAmount = document.getElementById(id).innerText;
     const currentNumber = parseFloat(currentAmount);

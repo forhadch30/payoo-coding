@@ -23,13 +23,15 @@
                     </div>
                     <div class="divider"></div>
                     <div>
-                        <button class="py-3 px-3 rounded-full text-white bg-teal-800">Add Money</button>
-                        <button class="py-3 px-3 rounded-full text-white bg-blue-800">Cash Out</button>
-                        <button class="py-3 px-3 rounded-full text-white bg-violet-900">Transaction</button>
+                        <button id="add-money" class="py-3 px-3 rounded-full text-white bg-teal-800">Add Money</button>
+                        <button id="show-cash-out" class="py-3 px-3 rounded-full text-white bg-blue-800">Cash
+                            Out</button>
+                        <button id="transaction-btn"
+                            class="py-3 px-3 rounded-full text-white bg-violet-900">Transaction</button>
                     </div>
                     <div class="divider"></div>
                     <!-- add money from start -->
-                    <div class="card hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div id="add-money-from" class="card  bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                             <div class="form-control">
                                 <label class="label">
@@ -42,7 +44,8 @@
                                 <label class="label">
                                     <span class="label-text">Pin Number</span>
                                 </label>
-                                <input id="pin-number" type="password" placeholder="password" class="input input-bordered" autocomplete="off" required />
+                                <input id="pin-number" type="password" placeholder="password"
+                                    class="input input-bordered" autocomplete="off" required />
                             </div>
                             <div class="form-control mt-6">
                                 <button id="btn-amount" class="btn btn-primary">Amount</button>
@@ -50,8 +53,8 @@
                         </form>
                     </div>
                     <!-- add money from end -->
-                     <!-- cash out from start -->
-                     <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <!-- cash out from start -->
+                    <div id="cash-out-from" class="card hidden bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                             <div class="form-control">
                                 <label class="label">
@@ -64,14 +67,23 @@
                                 <label class="label">
                                     <span class="label-text">Pin Number</span>
                                 </label>
-                                <input id="cash-out-pin-number" type="password" placeholder="password" class="input input-bordered" autocomplete="off" required />
+                                <input id="cash-out-pin-number" type="password" placeholder="password"
+                                    class="input input-bordered" autocomplete="off" required />
                             </div>
                             <div class="form-control mt-6">
                                 <button id="cash-out-btn" class="btn btn-primary">Amount</button>
                             </div>
                         </form>
                     </div>
-                     <!-- cash out from end -->
+                    <!-- cash out from end -->
+                    <!-- transaction start -->
+                    <div id="transaction-section">
+                        <h2 class="text-3xl text-center hidden">Transaction History</h2>
+                        <div id="transaction-area">
+
+                        </div>
+                    </div>
+                    <!-- transaction end -->
                 </div>
             </div>
         </div>
@@ -79,10 +91,11 @@
         <!-- cash out from start -->
         <!-- cash out from end -->
     </main>
-    <!-- <script src="add-money.js"></script> -->
-    <!-- <script src="secondTime.js"></script> -->
-     <script src="secondCash-out-add.js"></script>
-     <script src="secondCashOut.js"></script>
+    <script src="add-money.js"></script>
+    <script src="secondCash-out-add.js"></script>
+    <script src="secondCashOut.js"></script>
+    <script src="secondTime.js"></script>
+    <script src="transition.js"></script>
 </body>
 
 </html>
