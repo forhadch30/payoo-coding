@@ -39,7 +39,10 @@
 
 const ulListItems = document.getElementById('ul-container');
 const liList = ulListItems.getElementsByTagName('li');
-
+document.getElementById('items-2').addEventListener('click', function () {
+    const remove = document.getElementById('all-li');
+    remove.removeAttribute('style')
+})
 let fistLiList = null
 
 for (let listContainer of liList) {
